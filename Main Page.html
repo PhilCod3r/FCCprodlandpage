@@ -6,28 +6,200 @@
     <meta name="viewport" content="width= device-width ,initial-scale=1.0"/>
     <link rel="stylesheet" href="Pstyle.css" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+    <style>
+        *{
+    margin:0px;
+}
+body{
+    background-image: url("backg.jpg");
+    background-color: rgba(0,0,0, 0.3);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@media screen and (max-width:321px){
+    h2{
+        font-size: 90%;
+    }
+    #video iframe{
+        height: 50%;
+        width: 50%;
+    }
+    #header h2{
+        width: 50%;
+    }
+    #nav-bar li{
+        font-size: 10%;
+    }
+    body{
+        width: 100%;;
+    }
+}
+#nav-bar{
+    background-color:rgba(255,255,255, 0.6);
+    height: 8vh;
+    position: fixed;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: -0.8vh;
+}
+#header-img{
+    height: 5%;
+    width: 5%;
+    margin: 1.8vh 0px 0px 1vw;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 10;
+}
+#nav-bar h2{
+    margin: 6px 0px 0px 7vw;
+    padding: 5px;
+    font-family: 'Annie Use Your Telescope', 'Courier New', Courier, monospace;
+    font-size: 28px;
+    position:relative;
+    width: 40%;
+
+}
+#nav-bar ul{
+    float: right;
+    padding: 10px;
+    margin-top: -2.5%;
+    margin-right: 4%;
+}
+#nav-bar ul li{
+    display: inline-block;
+    margin: -4px 17px 0px 0px;
+    text-align: center;
+}
+#nav-bar ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: monospace;
+    font-size: 3vh;
+    padding: 5px;
+}
+#nav-bar ul li a:hover{
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    transition: (0.5ms)ease;
+}
+#main{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 60%;
+    margin-top: 2vh;
+}
+#quality{
+    position: absolute;
+    text-align: start;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 4%;
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#quality img{
+    width: 2.5vw;
+    height: 3vh;
+    margin-right: -1%;
+}
+#delivery{
+    position: absolute;
+    text-align: start;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 4%;
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#delivery img{
+    width: 4vw;
+    height: 5vh;
+    margin-left: -15%;
+}
+#recom{
+    position: absolute;
+    text-align: start;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 4%;
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#recom img{
+    width: 2vw;
+    height: 3vh;
+    margin-right: -20px;
+    margin-left: 3%;
+}
+#form{
+    text-align: center;
+    padding: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#form [type='submit']{
+    background-color: darkgoldenrod;
+    padding: 5px;
+    margin-top: 3px;
+    border: none;
+    border-radius: 7px;
+    font-family: monospace;
+    font-weight: bold;
+    margin-top: 5px;
+}
+#form [type='submit']:hover{
+    background-color: rgba(201,182,10,0.5);
+}
+#form input{
+    padding: 4px;
+}
+#products{
+    display: inline-flex;
+    padding: 20px;
+}
+#bright{
+    padding: 5px;
+    border: rgba(0,0,0, 0.6) solid;
+    margin-left: 10px;
+}
+#grand{
+    padding: 5px;
+    border: rgba(0,0,0, 0.6) solid;
+    margin-right: 10px;
+}
+#products h2{
+    background-color: rgba(255,255,255, 0.6);
+}
+    </style>
 </head>
 <body>
     <header id="header" name="head">
-        <a href="#head"><img src="navbar crop.png" id="header-img" alt="An Logo Of a Piano"></a>
+        <img src="https://cdn.pixabay.com/photo/2012/04/05/01/36/music-25705_960_720.png" id="header-img" alt="An Logo Of a Piano">
     <nav id="nav-bar" class="nav-bar">
         <h2>GET YOUR PIANO</h2>
         <ul>
-            <li class="nav-link"><a href="#features" target="_self" >Features</a></li>
-            <li class="nav-link"><a href="#video" target="_self" >Learn It</a></li>
-            <li class="nav-link"><a href="#products" target="_self" >Pricing</a></li>
+            <li class="nav-link" href="#features"><a href="#features" target="_self" >Features</a></li>
+            <li class="nav-link" href="#video"><a href="#video" target="_self" >Learn It</a></li>
+            <li class="nav-link" href="#products"><a href="#products" target="_self" >Pricing</a></li>
         </ul>
     </nav>
     </header><br><br><br>
     <form id="form" action=" https://www.freecodecamp.com/email-submit">
         <label for="email">
         <h2>Find Your Passion..</h2><br>
-        <input id="email" type="email" placeholder="Enter Email ID:" autocomplete="off" required><br>
+        <input id="email" name="email" type="email" placeholder="Enter Email ID:" autocomplete="off" required><br>
         </label>
-        <input type="submit" id="submit" value="Here It Is.">
+        <input type="submit" id="submit" value="Here It Is." >
     </form>
     <main id="main">
-        <div id="points" name="features">
+        <div id="features" name="features">
         <div id="quality">
         <img src="quality.png">
         <h2>Quality Assured Products</h2>
@@ -41,11 +213,11 @@
             <h2>Recommended by Professionals</h2>
         </div>
         </div><br><br><br><br><br><br><br>
-        <div id="video" name="video">
+        <div name="video">
             <iframe width="560" height="315" 
             src="https://www.youtube.com/embed/kQSoW1VnkH4" 
             frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen></iframe>
+            allowfullscreen id="video"></iframe>
         </div>
         <div id="products" name="products">
             <div id="grand">
